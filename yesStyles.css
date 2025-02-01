@@ -1,0 +1,92 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6e6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.subheader {
+    font-size: 1.5em;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.kiss {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.vinyl-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    text-align: center;
+}
+
+.vinyl {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.4s ease-in-out, scale 0.4s ease-in-out, rotate 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(231, 76, 60, 0.5);
+    z-index: 1;
+}
+
+.container:hover .vinyl {
+    transform: translateX(150px);
+}
+
+.container:hover .cover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 10px 10px 20px rgba(231, 76, 60, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
